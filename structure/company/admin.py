@@ -1,6 +1,7 @@
 from django.contrib import admin
 from structure.company.models.plans import (
-    Plans
+    Plans,
+    PlanSubscription
 )
 from structure.company.models.company import (
     Company,
@@ -18,4 +19,10 @@ class SubscriptionAdmin(admin.ModelAdmin):
     list_display = ['id','company','customer','phoneNumber']
 
 admin.site.register(CompanySubscription,SubscriptionAdmin)
+admin.site.register(Plans)
+
+class PlansAdmin(admin.ModelAdmin):
+    list_display = ['id','plan','customer','registered_sim']
+
+admin.site.register(PlanSubscription,PlansAdmin)
 

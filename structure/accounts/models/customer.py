@@ -30,6 +30,7 @@ class Customer(InitModels):
         null=True,verbose_name="Phone Number",
         blank=True
     )
+    wallet = models.FloatField(default=0,null=True,verbose_name="Wallet")
 
 
     def __str__(self):

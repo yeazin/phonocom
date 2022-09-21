@@ -54,9 +54,9 @@ class CompanySubscription(InitModels):
     )
 
     def __str__(self):
-        return str(self.id)
+        return str(self.phoneNumber)
 
     
     class Meta:
-        verbose_name_plural = "Subscription"
-        # indexes = [models.indexes(fields = ['id','company','customer'])]
+        verbose_name_plural = "Sim Subscription"
+        indexes = [models.Index(fields = ['id','company','customer'])]

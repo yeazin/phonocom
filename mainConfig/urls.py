@@ -28,6 +28,7 @@ urlpatterns = [
 
     # adding APP url 
     path('customer/',include('structure.accounts.urls')),
+    path('',include('structure.company.urls')),
 
 
     # Redoc URL config 
