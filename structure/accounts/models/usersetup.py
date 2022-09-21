@@ -54,7 +54,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 
     def __str__(self):
-        return f"{self.username}" if {self.username} else "null"
+        return str(self.id)
 
 
     class Meta:
