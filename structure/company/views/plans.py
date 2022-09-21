@@ -72,7 +72,6 @@ class PlanSubscriptionView(GenericAPIView):
                 # saving the Data
                 apifetch.save()
 
-
                 return Response({
                     'Success':'Customer Registration Success'
                 },status=status.HTTP_201_CREATED)

@@ -28,7 +28,7 @@ class CompanyAPI(serializers.ModelSerializer):
 class SimSubscriptionAPI(serializers.ModelSerializer):
     class Meta:
         model = CompanySubscription
-        fields = ['company','customer','phoneNumber']
+        fields = ['company','customer']
 
 
 
