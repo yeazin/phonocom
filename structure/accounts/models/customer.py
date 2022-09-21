@@ -24,11 +24,17 @@ class Customer(InitModels):
     lastName = models.CharField(
         max_length=200,null=True,verbose_name="Last Name"
     )
-    phoneNumber = models.IntegerField(
-        unique=True
+    phoneNumber = models.CharField(
+        max_length=11,unique=True,
+        null=True,verbose_name="Phone Number",
+        blank=True
     )
     
 
     def __str__(self):
         return self.firstName
+
+    class Meta:
+        verbose_name_plural = "Customer"
+        indexes = [models.Index(fields=['id','user','phoneNumber'])]
     

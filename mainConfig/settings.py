@@ -39,8 +39,13 @@ INSTALLED_APPS  = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    # project apps install 
-    'structure.accounts.apps.AccountsConfig'
+    # Installed app
+    'rest_framework',
+    'drf_yasg',
+
+    # project apps 
+    'structure.accounts.apps.AccountsConfig',
+    'structure.company.apps.CompanyConfig'
 ]
 
 # Project_APP = [
