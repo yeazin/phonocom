@@ -28,4 +28,7 @@ class Customer(InitModels):
         unique=True
     )
     
+
+    def __str__(self):
+        return self.firstName
     
