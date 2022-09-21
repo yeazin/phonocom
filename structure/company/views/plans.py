@@ -7,6 +7,7 @@ This file contains the followings
 # importing initials 
 
 from rest_framework import status
+from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.generics import GenericAPIView
 
@@ -78,3 +79,27 @@ class PlanSubscriptionView(GenericAPIView):
 
         else:
             return Response(apifetch.errors)
+
+
+'''
+Plans Functional View s
+    Create
+    Update
+    view 
+    list
+    delete
+'''
+
+# Create  & list view 
+
+class PlansView(generics.ListCreateAPIView):
+    queryset = Plans.objects.filter(is_active=True)
+    serializer_class = PlansAPI
+
+# Update , view , delete 
+
+class PlanSingleView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Plans.objects.filter(is_active=True)
+    serializer_class = PlansAPI
+
+    
