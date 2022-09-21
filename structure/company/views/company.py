@@ -39,3 +39,23 @@ class SimSubscriptionCreateView(GenericAPIView):
             return Response({
                 'Error':'Submission data not Valid'
             },status=status.HTTP_406_NOT_ACCEPTABLE)
+
+
+'''
+Comapny Functional Logic
+    create
+    delete 
+    update 
+    list
+'''
+
+# list , create
+class CompanyView(generics.ListCreateAPIView):
+    queryset = Company.objects.filter(is_active=True)
+    serializer_class = CompanyAPI
+
+
+# update, view ,delete 
+class CompanySingleView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Company.objects.filter(is_active=True)
+    serializer_class = CompanyAPI
