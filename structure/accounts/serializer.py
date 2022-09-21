@@ -23,9 +23,11 @@ class CustomerAPI(serializers.ModelSerializer):
         fields = ['user','firstName','lastName','password','confirm_password']
 
     def create(self,validated_data):
+        # getting Password and confirm password
         password1 = validated_data.pop('password')
         password2 = validated_data.pop('confirm_password')
 
+        # creatng the User first then assing to customer instance
         auth_info = {
             'password':make_password(password1),
             'confirm_password':make_password(password2)
@@ -33,9 +35,16 @@ class CustomerAPI(serializers.ModelSerializer):
         userobj = User(**auth_info)
         userobj.save()
         
+        ## Assigning the user to customer instance and save 
         customer_obj = Customer.objects.create(**validated_data)
         customer_obj.user = userobj
+        customer_obj.save()
 
+        # Creating Username after customer creation 
+        # username is combined wiht First name and phone Number
+        customer_obj.user.username = f"{customer_obj.firstName}_{customer_obj.phoneNumber}"
+        customer_obj.user.save()
+        
         return customer_obj
         
 
