@@ -25,7 +25,6 @@ class Plans(InitModels):
         verbose_name_plural = " Plans "
 
 
-
 ### Database of Plan Subscription between customer and plans
 
 class PlanSubscription(InitModels):

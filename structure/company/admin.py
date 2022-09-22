@@ -7,6 +7,9 @@ from structure.company.models.company import (
     Company,
     CompanySubscription
 )
+from structure.company.models.tracking import (
+    TrackingCustomer
+)
 
 ## Company admin
 class CompanyAdmin(admin.ModelAdmin):
@@ -25,4 +28,9 @@ class PlansAdmin(admin.ModelAdmin):
     list_display = ['id','plan','customer','registered_sim']
 
 admin.site.register(PlanSubscription,PlansAdmin)
+
+class TrackingAdmin(admin.ModelAdmin):
+    list_display = ['id','customer','offerName','status']
+
+admin.site.register(TrackingCustomer, TrackingAdmin)
 
