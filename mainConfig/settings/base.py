@@ -6,7 +6,8 @@ from decouple import config
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,21 +30,9 @@ INSTALLED_APPS  = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # Installed app
-    'rest_framework',
-    'drf_yasg',
-
-    # project apps 
-    'structure.accounts.apps.AccountsConfig',
-    'structure.company.apps.CompanyConfig'
 ]
 
-# Project_APP = [
-#     'structure.accounts'
-# ]
 
-# INSTALLED_APPS = Default_APP + Project_APP
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
