@@ -1,0 +1,69 @@
+[
+    {
+        "model":"company.company",
+        "pk":1,
+        "fields":{
+            "name":"Grameen Phone",
+            "digitprefix":"017"
+        }
+    },
+    {
+        "model":"company.company",
+        "pk":2,
+        "fields":{
+            "name":"Robi",
+            "digitprefix":"018"
+        }
+    },
+    {
+        "model":"company.company",
+        "pk":3,
+        "fields":{
+            "name":"Banglalink",
+            "digitprefix":"019"
+        }
+    },
+    {
+        "model":"company.company",
+        "pk":4,
+        "fields":{
+            "name":"Teletalk",
+            "digitprefix":"015"
+        }
+    },
+    {
+        "model":"company.company",
+        "pk":5,
+        "fields":{
+            "name":"Airtel",
+            "digitprefix":"016"
+        }
+    },
+    {
+        "model":"company.plans",
+        "pk":1,
+        "fields":{
+            "planName":"Globalnet Bronze",
+            "price":"500",
+            "duration":"12 months"
+        }
+    },
+    {
+        "model":"company.plans",
+        "pk":2,
+        "fields":{
+            "planName":"Globalnet Silver",
+            "price":"750",
+            "duration":"12 months"
+        }
+    },
+    {
+        "model":"company.plans",
+        "pk":3,
+        "fields":{
+            "planName":"Globalnet Gold",
+            "price":"1500",
+            "duration":"no contract"
+        }
+    }
+]
