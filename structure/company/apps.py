@@ -6,4 +6,5 @@ class CompanyConfig(AppConfig):
     name = 'structure.company'
 
     def ready(self):
-        import structure.company.signals
+        import structure.company.signals.phone_signals
+        import structure.company.signals.track_signals
