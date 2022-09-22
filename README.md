@@ -1,4 +1,14 @@
 <h2 align="center"> PhonoCom Backend </h2><br>
+<p align="center">
+
+[Built with](#-project-installation-)
+
+</p>
+[Built with](#technologies-built-with----)
+
+
+#### Navigation : [Built with](#technologies-built-with----)--[Setup Local](#how-to-setup-in-windowsmaclinux)--[Project Features & Details ](#project-details--features-with-images)--[Issues](#issues--questions)--[Disclaimer](#disclaimer)--[Ower Info ](#repository-owner-info) 
+
 
 <h6 align="Center">
 
