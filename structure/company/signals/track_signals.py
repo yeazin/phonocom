@@ -1,7 +1,7 @@
 '''
 This file contains the followings
     - Obj will be created via Plan subscription 
-    - obj will status will be changed via plan subscription 
+    - obj status will be changed via plan subscription 
 '''
 
 from django.dispatch import receiver

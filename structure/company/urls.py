@@ -17,8 +17,17 @@ from structure.company.views.company import (
     CompanySingleView,
     SimSubscriptionCreateView
 )
+from structure.company.views.tracking_views import (
+    ActiveTrackingViews,
+    CanceledTrackingViews
+)
 
 urlpatterns = []
+
+tracking_URL = [
+    path('tracking/activate/',ActiveTrackingViews.as_view()),
+    path('tracking/canceled/',CanceledTrackingViews.as_view())
+]
 
 plans_URL = [
     path('plan/',PlansView.as_view()),
@@ -32,5 +41,7 @@ company_URL = [
     path('company/subscription',SimSubscriptionCreateView.as_view())
 ]
 
+
+urlpatterns += tracking_URL
 urlpatterns += plans_URL
 urlpatterns += company_URL
