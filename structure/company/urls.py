@@ -10,12 +10,16 @@ from django.urls import path
 from structure.company.views.plans import (
     PlansView,
     PlanSingleView,
-    PlanSubscriptionView
+    PlanSubscriptionView,
+    PlanSubsListView,
+    PlanSubSingleView
 )
 from structure.company.views.company import (
     CompanyView,
     CompanySingleView,
-    SimSubscriptionCreateView
+    SimSubscriptionCreateView,
+    SimSubsListView,
+    SimSubsSingleView
 )
 from structure.company.views.tracking_views import (
     ActiveTrackingViews,
@@ -26,19 +30,23 @@ urlpatterns = []
 
 tracking_URL = [
     path('tracking/activate/',ActiveTrackingViews.as_view()),
-    path('tracking/canceled/',CanceledTrackingViews.as_view())
+    path('tracking/canceled/',CanceledTrackingViews.as_view()),
 ]
 
 plans_URL = [
-    path('plan/',PlansView.as_view()),
+    path('plan/',PlansView.as_view()), 
     path('plan/<int:pk>/',PlanSingleView.as_view()),
-    path('plan/subscription/',PlanSubscriptionView.as_view())
+    path('plan/subscription/',PlanSubscriptionView.as_view()),
+    path('plan/subscription/',PlanSubsListView.as_view()),
+    path('plan/subscription/<int:pk>/', PlanSubSingleView.as_view())
 ]
 
 company_URL = [
-    path('company',CompanyView.as_view()),
-    path('company/,<int:pk>/',CompanySingleView.as_view()),
-    path('company/subscription',SimSubscriptionCreateView.as_view())
+    path('company/',CompanyView.as_view()),
+    path('company/<int:pk>/',CompanySingleView.as_view()),
+    path('company/subscription/',SimSubscriptionCreateView.as_view()),
+    path('company/subscription/',SimSubsListView.as_view()),
+    path('company/subscription/<int:pk>/',SimSubsSingleView.as_view())
 ]
 
 
