@@ -17,16 +17,17 @@
 
 </h6>
 
- <h3> Project Installation </h3>
- <br>
-Clone the repository using the following command
+<h3> Project Installation </h3>
+<br>
+
+#### Clone the repository using the following command
 
 ```bash
 git clone https://github.com/yeazin/phonocom.git
 # After cloning, move into the directory 
 # having the project files 
 ```
-Create a virtual environment where all the required python packages will be installed
+#### Create a virtual environment where all the required python packages will be installed
 
 ```bash
 # Use this on Windows
@@ -34,7 +35,7 @@ python -m venv env
 # Use this on Linux and Mac
 python3 -m venv env
 ```
-Activate the virtual environment
+#### Activate the virtual environment
 
 ```bash
 
@@ -45,14 +46,14 @@ env\Scripts\activate.bat
 source env/bin/activate
 
 ```
-Install all the project Requirements
+#### Install all the project Requirements
 
 ```bash
 
 pip install -r requirements.txt
 
 ```
--Apply migrations and create your superuser (follow the prompts)
+#### Apply migrations and create your superuser (follow the prompts)
 
 ```bash
 
@@ -63,9 +64,10 @@ python manage.py migrate
 python manage.py createsuperuser
 
 ```
-Load inital data to database <br>
+#### Load inital data to database <br>
 check here for more info for [Resource Data](https://github.com/yeazin/phonocom/tree/main/resource#-resource-data-) <br>
 Inital Data : 
+
 ```bash
 
 # load inital data
@@ -73,13 +75,13 @@ python manage.py loaddata resource/init.json
 
 ```
 
-Run the development server
+#### Run the development server
 
 ```bash
 # run django development server
 python manage.py runserver
 
 ```
-Now we are good to Go . We can check the [127.0.0.1:8000](127.0.0.1:8000) <br> for The root API documention.
+#### Now we are good to Go . We can check the [127.0.0.1:8000](127.0.0.1:8000) <br> for The root API documention.
 
 <h3>Project Flow</h3>
