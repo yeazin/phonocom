@@ -22,9 +22,9 @@
 Clone the repository using the following command
 
 ```bash
-git clone github.com/lab-braincodeltd/project-payraapp.git
-# After cloning, move into the directory having the project files using the change directory command
-cd project-payraapp
+git clone https://github.com/yeazin/phonocom.git
+# After cloning, move into the directory 
+# having the project files 
 ```
 Create a virtual environment where all the required python packages will be installed
 
@@ -37,39 +37,49 @@ python3 -m venv env
 Activate the virtual environment
 
 ```bash
+
 # Windows
 env\Scripts\activate.bat
+
 # Linux and Mac
 source env/bin/activate
+
 ```
 Install all the project Requirements
+
 ```bash
+
 pip install -r requirements.txt
+
 ```
 -Apply migrations and create your superuser (follow the prompts)
+
 ```bash
+
 # apply migrations and create your database
 python manage.py migrate
 
 # Create a user with manage.py
 python manage.py createsuperuser
+
 ```
 Load inital data to database <br>
+check here for more info for [Resource Data](https://github.com/yeazin/phonocom/tree/main/resource#-resource-data-) <br>
 Inital Data : 
 ```bash
+
 # load inital data
-python manage.py loaddata init.json
+python manage.py loaddata resource/init.json
+
 ```
-Member data
-```bash
-# load inital data of Member
-python manage.py loaddata initMember.json
-```
+
 Run the development server
 
 ```bash
 # run django development server
 python manage.py runserver
+
 ```
+Now we are good to Go . We can check the [127.0.0.1:8000](127.0.0.1:8000) <br> for The root API documention.
 
 <h3>Project Flow</h3>
