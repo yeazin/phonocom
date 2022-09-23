@@ -93,34 +93,40 @@ Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000)
 ```bash 
 
 
-    mainConfig (Root Config folder)
-        scripts (folder for custom scripts)
-            numbergenerate.py (generating unique phone number)
-        settings
+    mainConfig (Root Config folder)/
+
+        scripts (folder for custom scripts)/
+            numbergenerate.py (
+        settings/
             base.py (base settings)
             development ( development settings)
         models.py (init models file)
         urls.py (Root URL file)
         wsgi.py
-    resource 
+
+    resource/ 
         init.json (init data)
-    structure (All the APP will be under on it)
-        accounts
-            models (database folder)            
-            signals (signals folder)
-            views (Company Views folder)
-            test (Tesing Folder)
+
+    structure (All the APP will be under on it)/
+
+        accounts/
+            models (database folder)/        
+            signals (signals folder)/
+            views (Company Views folder)/
+            test (Tesing Folder)/
             serializer.py (API file)
             urls.py (accounts URL file)
             admin.py
-        company
-            models (database folder)
-            signals (signals folder)
-            views (Company Views folder)
-            test (Testing Folder)
+
+        company/
+            models (database folder)/
+            signals (signals folder)/
+            views (Company Views folder)/
+            test (Testing Folder)/
             serializer (API file)
             urls.py (company URL)
             admin.py
+
     .env
     .gitignore
     db
