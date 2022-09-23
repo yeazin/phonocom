@@ -1,15 +1,4 @@
-<h2 align="center"> PhonoCom Backend </h2><br>
-<p align="center">
-
-[Built with](#-project-installation-)
-
-</p>
-[Built with](#technologies-built-with----)
-
-
-#### Navigation : [Built with](#technologies-built-with----)--[Setup Local](#how-to-setup-in-windowsmaclinux)--[Project Features & Details ](#project-details--features-with-images)--[Issues](#issues--questions)--[Disclaimer](#disclaimer)--[Ower Info ](#repository-owner-info) 
-
-
+<h1 align="center"> PhonoCom Backend </h1><br>
 <h6 align="Center">
 
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
@@ -17,7 +6,17 @@
 
 </h6>
 
-<h3> Project Installation </h3>
+<br>
+
+<h4 align="center">
+<a href="https://github.com/yeazin/phonocom#-project-installation-"> Project Installation</a> | 
+<a href="https://github.com/yeazin/phonocom#project-flow"> Project Flow </a>
+</h4>
+
+<br>
+
+
+<h2 align="center"> Project Installation </h2>
 <br>
 
 #### Clone the repository using the following command
@@ -82,6 +81,7 @@ python manage.py loaddata resource/init.json
 python manage.py runserver
 
 ```
-#### Now we are good to Go . We can check the [127.0.0.1:8000](127.0.0.1:8000) <br> for The root API documention.
+Now we are good to Go . We can check the [127.0.0.1:8000](127.0.0.1:8000) <br> for The root API documention.
+<br>
 
-<h3>Project Flow</h3>
+<h2 align="center">Project Flow</h2>
