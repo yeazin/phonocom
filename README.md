@@ -109,6 +109,7 @@ Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000)
             models (database folder)            
             signals (signals folder)
             views (Company Views folder)
+            test (Tesing Folder)
             serializer.py (API file)
             urls.py (accounts URL file)
             admin.py
@@ -116,6 +117,7 @@ Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000)
             models (database folder)
             signals (signals folder)
             views (Company Views folder)
+            test (Testing Folder)
             serializer (API file)
             urls.py (company URL)
             admin.py
@@ -202,3 +204,12 @@ Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000)
 
 ```
 <br>
+
+#### Test Case 
+<br>
+
+```bash 
+
+    All the URLs TestCase is inclued in each app testing folder
+
+```
