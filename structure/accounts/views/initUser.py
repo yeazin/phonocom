@@ -7,13 +7,9 @@ This file contains the following
 
 from rest_framework.generics import GenericAPIView
 from rest_framework.response import Response
-from django.contrib.auth.hashers import make_password
 from rest_framework import status
 
 # importing models
-from structure.accounts.models.usersetup import(
-    User
-)
 from structure.accounts.models.customer import (
     Customer
 )
