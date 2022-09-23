@@ -85,31 +85,35 @@ Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000)
 <br>
 
 <h2 align="center">Project Flow</h2>
+<br>
 
 #### Project Structure 
+<br>
 
 ```bash 
+
+
     mainConfig (Root Config folder)
-        scripts ()
+        scripts (folder for custom scripts)
             numbergenerate.py (generating unique phone number)
         settngs
             base.py (base settings)
             development ( development settings)
-        models (init models file)
-        urls (Root URL file)
-        wsgi
+        models.py (init models file)
+        urls.py (Root URL file)
+        wsgi.py
     resource 
         init.json (init data)
     structure (All the APP will be under on it)
         accounts
-            models (database file)            
+            models (database folder)            
             signals (signals folder)
             views (Company Views folder)
             serializer.py (API file)
             urls.py (accounts URL file)
             admin.py
         company
-            models (database file)
+            models (database folder)
             signals (signals folder)
             views (Company Views folder)
             serializer (API file)
@@ -122,11 +126,79 @@ Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000)
     
 
 ```
+<br>
+
 
 #### Customer  Module 
+<br>
 
 ```bash 
+
     In Registration Customer 
-        - First Name , Last Name and phone 
+        - Customer will be created with First Name , Last Name and Unique phone 
+          Number generating on it. 
+        - The Customer unique is their phone Number on the System
+        - Customer will have a Wallet system based on their profile.
+          So that they can buy plans from their wallet money.
 
 ```
+
+#### Company Module 
+<br>
+
+```bash 
+
+    Company Registration 
+        - Company can be registered with their name 
+        - Digitprefix ( example : 017,019,018)
+        - Description 
+        - ALL CRUD operations 
+
+    Company Subscription 
+        - Customer can register to any company.
+        - Eeach time Customer register to a comapny , company will provide them 
+          a Unque Phone number.
+          (example : if a customer register with Grameen Phone Company then 
+          the company will give the customer a grameen phone Number like - 0172453...  )
+
+
+```
+<br>
+
+#### Plan Module 
+<br>
+
+```bash 
+
+    Plan Registration 
+        - Admin can add Plan to the system 
+        - The fields are (plan name , Plan price , plan duration )
+        - All CRUD operations included 
+    
+    Plan Subscription 
+        - A customer can subscribe to any plan with only one unque 
+        phone number , so there is no chance a customer can subscibe to 
+        different plans with one number. Validation process is being implimented on the system. 
+        - Customer cannot buy a plan unless they have enough money on their wallet. 
+        - Wallet can refiled via payment method like sslCommerz/stripe . 
+        - All CRUD operation included. 
+
+
+```
+<br>
+
+
+#### Tracking Module 
+<br>
+
+```bash 
+
+    - This modules is only for admin to track customer and their plans.
+    - When a customer buy a plan a tracking with activated status will 
+      generated in admin section with plan`s full details . 
+    - And when a customer cancel a plan , a tracking with canceled status 
+      will be generated in admin section also with plan`s full details.
+
+
+```
+<br>
