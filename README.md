@@ -81,7 +81,52 @@ python manage.py loaddata resource/init.json
 python manage.py runserver
 
 ```
-Now we are good to Go . We can check the [127.0.0.1:8000](127.0.0.1:8000) <br> for The root API documention.
+Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000) <br> for The root API documention.
 <br>
 
 <h2 align="center">Project Flow</h2>
+
+#### Project Structure 
+
+```bash 
+    mainConfig (Root Config folder)
+        scripts ()
+            numbergenerate.py (generating unique phone number)
+        settngs
+            base.py (base settings)
+            development ( development settings)
+        models (init models file)
+        urls (Root URL file)
+        wsgi
+    resource 
+        init.json (init data)
+    structure (All the APP will be under on it)
+        accounts
+            models (database file)            
+            signals (signals folder)
+            views (Company Views folder)
+            serializer.py (API file)
+            urls.py (accounts URL file)
+            admin.py
+        company
+            models (database file)
+            signals (signals folder)
+            views (Company Views folder)
+            serializer (API file)
+            urls.py (company URL)
+            admin.py
+    .env
+    .gitignore
+    db
+    requirements 
+    
+
+```
+
+#### Customer  Module 
+
+```bash 
+    In Registration Customer 
+        - First Name , Last Name and phone 
+
+```
