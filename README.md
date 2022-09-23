@@ -96,7 +96,7 @@ Now we are good to Go . We can check the [127.0.0.1:8000](http://127.0.0.1:8000)
     mainConfig (Root Config folder)
         scripts (folder for custom scripts)
             numbergenerate.py (generating unique phone number)
-        settngs
+        settings
             base.py (base settings)
             development ( development settings)
         models.py (init models file)

@@ -41,6 +41,20 @@ class SimSubscriptionCreateView(GenericAPIView):
             },status=status.HTTP_406_NOT_ACCEPTABLE)
 
 
+## Sim subscription list View 
+
+class SimSubsListView(generics.ListAPIView):
+    queryset = CompanySubscription.objects.filter(is_active=True)
+    serializer_class = SimSubscriptionAPI
+
+### Sim Subcription Update, View  , Delete view 
+
+class SimSubsSingleView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CompanySubscription.objects.filter(is_active=True)
+    serializer_class = SimSubscriptionAPI
+
+
+
 '''
 Comapny Functional Logic
     create

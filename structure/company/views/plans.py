@@ -81,6 +81,18 @@ class PlanSubscriptionView(GenericAPIView):
             return Response(apifetch.errors)
 
 
+## Plan Subscription List View 
+
+class PlanSubsListView(generics.ListAPIView):
+    queryset = PlanSubscription.objects.filter(is_active=True)
+    serializer_class = PlanSubscriptionAPI
+
+## Plan Subscription Update, View , Delete 
+
+class PlanSubSingleView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = PlanSubscription.objects.filter(is_active=True)
+    serializer_class = PlanSubscriptionAPI    
+
 '''
 Plans Functional View s
     Create
